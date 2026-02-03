@@ -17,6 +17,23 @@ export async function createChat(req, res) {
     }
 }
 
+export async function getAllChats(req, res) {
+    try {
+        const chats = await Chat.find();
+        res.status(200).json({
+            success: true,
+            data: chats,
+            message: "Chats obtenidos"
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            data: null,
+            message: "Error al obtener chats: " + error.message
+        });
+    }
+}
+
 export async function viewChatsByUserId(req, res) {
     try {
         const chats = await Chat.find({ participants: req.params.userId });
