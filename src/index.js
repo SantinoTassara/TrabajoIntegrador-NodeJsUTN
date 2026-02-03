@@ -2,6 +2,7 @@ import express from "express";
 import { connectDB } from "./config/db.js";
 import chatRoutes from "./routes/chat.routes.js";
 import userRoutes from "./routes/user.routes.js";
+import messageRoutes from "./routes/message.routes.js";
 
 const app = express();
 const port = 3000;
@@ -15,6 +16,7 @@ app.listen(port, () => {
 app.use(express.json());
 app.use("/chat", chatRoutes);
 app.use("/user", userRoutes);
+app.use("/message", messageRoutes);
 
 
 //Este mensaje esta oculto para futuros docentes que corrijan esto
