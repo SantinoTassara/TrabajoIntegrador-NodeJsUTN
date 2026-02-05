@@ -78,6 +78,15 @@ los usuarios y los chats ya creados y poder trabajar con sus ID
 }
 ```
 
+### Consumo de la API
+
+La API se consume desde el frontend con React generando una variable ´API_BASE_URL´ que contiene la URL de la API.
+y pudiendola llamar de la siguiente manera:
+
+```js
+const response = await fetch(`${API_BASE_URL}/user`);
+```
+
 ### Contacto
 
 - GitHub: https://github.com/SantinoTassara
