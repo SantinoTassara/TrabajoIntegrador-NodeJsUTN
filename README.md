@@ -7,18 +7,24 @@
 ### Descripción
 
 API REST basica de mensajeria para el Curso de Node.js de la UTN E-Learning.
+- URL: https://trabajo-integrador-node-js-utn.vercel.app/
 
 ### Requisitos
 
 - Node.js 18 o superior
 - MongoDB 5.0 o superior
 
+### URL DEL PROYECTO
+
+- https://trabajo-integrador-node-js-utn.vercel.app/
+
 
 ### Instalacion(Opcional)
 
 1. Clona el repositorio
 2. Ejecuta `npm install` para instalar las dependencias
-3. Ejecuta `npm start` para iniciar el servidor
+3. Ejecuta `npm run dev` para iniciar el servidor
+
 
 ### Uso (DEJO EJEMPLOS PARA REALIZAR LOS POST MAS ABAJO)
 
@@ -28,6 +34,9 @@ API REST basica de mensajeria para el Curso de Node.js de la UTN E-Learning.
 - GET /chat/:userId: Obtener los chats de un usuario
 - POST /message: Crear un mensaje
 - GET /message/:chatId: Obtener los mensajes de un chat
+
+Recomiendo el uso de Postman para probar los endpoints. Pero antes realizar un GET /user y GET /chat para obtener todos
+los usuarios y los chats ya creados y poder trabajar con sus ID
 
 ### Tecnologías
 
