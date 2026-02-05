@@ -71,10 +71,10 @@ API REST basica de mensajeria para el Curso de Node.js de la UTN E-Learning.
 
 ### Contacto
 
--GitHub: https://github.com/SantinoTassara
--Portafolio: https://santinotassara.vercel.app/
--linkedin: https://www.linkedin.com/in/santinotassara/
--Correo: santinotassaraar@gmail.com
+- GitHub: https://github.com/SantinoTassara
+- Portafolio: https://santinotassara.vercel.app/
+- linkedin: https://www.linkedin.com/in/santinotassara/
+- Correo: santinotassaraar@gmail.com
 
 
 
