@@ -1,6 +1,6 @@
 import Chat from "../models/chat.js";
 
-export async function createChat(req, res) {
+export async function createChat(req, res, next) {
     try {
         const chat = await Chat.create(req.body);
         res.status(201).json({
@@ -9,11 +9,7 @@ export async function createChat(req, res) {
             message: "Chat creado"
         });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            data: null,
-            message: "Error al crear chat: " + error.message
-        });
+        next(error)
     }
 }
 
@@ -36,7 +32,7 @@ export async function getAllChats(req, res) {
 
 export async function viewChatsByUserId(req, res) {
     try {
-        const chats = await Chat.find({ participants: req.params.userId });
+        const chats = await Chat.findById(req.params.userId);
         res.status(200).json({
             success: true,
             data: chats,

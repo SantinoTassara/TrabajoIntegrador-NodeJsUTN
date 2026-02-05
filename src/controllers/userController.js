@@ -18,7 +18,7 @@ export async function getAllUsers(req, res) {
 }
 
 
-export async function createUser(req, res) {
+export async function createUser(req, res, next) {
     try {
         const user = await User.create(req.body);
         res.status(201).json({
@@ -27,11 +27,7 @@ export async function createUser(req, res) {
             message: "Usuario creado"
         });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            data: null,
-            message: "Error al crear usuario: " + error.message
-        });
+        next(error)
     }
 }
 export async function deleteUser(req, res) {

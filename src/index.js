@@ -10,15 +10,17 @@ const port = 3000;
 
 connectDB();
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
-
 app.use(express.json());
 app.use(cors());
+
 app.use("/chat", chatRoutes);
 app.use("/user", userRoutes);
 app.use("/message", messageRoutes);
+
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+});
 
 
 
