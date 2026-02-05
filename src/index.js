@@ -18,11 +18,11 @@ app.use("/user", userRoutes);
 app.use("/message", messageRoutes);
 
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Servidor local en puerto ${port}`);
+    });
+}
 
 
-
-//Les dejo el link de mi Portfolio por si lo quieren checkear, hay un proyecto que realizamos con node y express (Faltan algunos proyectos mb)
-// https://santinotassara.vercel.app/
+export default app;
